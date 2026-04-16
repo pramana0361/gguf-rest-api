@@ -5,3 +5,4 @@ __pycache__/
 *.pyc
 models/*
 sample_data/.DS_Store
+.DS_Store
