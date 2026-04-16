@@ -7,7 +7,7 @@ The FastAPI-based REST API server presented in this example uses the Qwen3 think
 
 ## Installation
 #### Create and activate 'venv' (not mendatory)
-```
+```bash
 python3 -m venv venv
 
 # Linux/macOS
@@ -24,7 +24,7 @@ venv\Scripts\activate
 #### Download model
 Edit **repo_id** and **filename** in **download_model.py**\
 Model page used as an example: https://huggingface.co/TeichAI/Qwen3-4B-Thinking-2507-MiniMax-M2.1-Distill-GGUF
-```
+```python
 model_path = hf_hub_download(
         repo_id="TeichAI/Qwen3-4B-Thinking-2507-MiniMax-M2.1-Distill-GGUF",
         filename="Qwen3-4B-Thinking-2507-MiniMax-M2.1-Distill.iq4_nl.gguf",
@@ -38,7 +38,7 @@ Check whether the model file (GGUF) has been downloaded to the **/models** folde
 
 #### Setup environment variables
 Open **.env.example** 
-```
+```bash
 MODEL_PATH=./models/your-downloaded-model-file.gguf
 MODEL_NAME=your-downloaded-model-name
 HOST=0.0.0.0
@@ -66,7 +66,7 @@ Raw text completion endpoint\
 ## Endpoints example
 ### /v1/chat/completions
 #### Example request:
-```
+```bash
 curl -X POST http://localhost:8000/v1/chat/completions \
 -H "Content-Type: application/json" \
 -d '{
@@ -80,7 +80,7 @@ curl -X POST http://localhost:8000/v1/chat/completions \
 }'
 ```
 
-```
+```bash
 curl -X POST http://localhost:8000/v1/chat/completions \
 -H "Content-Type: application/json" \
 -d '{
@@ -96,7 +96,7 @@ curl -X POST http://localhost:8000/v1/chat/completions \
 ```
 
 #### Example response:
-```
+```json
 {
     "id": "chatcmpl-abc123",
     "model": "qwen3-4b-thinking",
@@ -108,10 +108,10 @@ curl -X POST http://localhost:8000/v1/chat/completions \
     "usage": {"prompt_tokens": 16, "completion_tokens": 10, "total_tokens": 26}
 }
 ```
-
+---
 ### /v1/completions
 #### Example request:
-```
+```bash
 curl -X POST http://localhost:8000/v1/completions \
 -H "Content-Type: application/json" \
 -d '{
@@ -123,7 +123,7 @@ curl -X POST http://localhost:8000/v1/completions \
 }'
 ```
 
-```
+```bash
 curl -X POST http://localhost:8000/v1/completions \
 -H "Content-Type: application/json" \
 -d '{
@@ -137,7 +137,7 @@ curl -X POST http://localhost:8000/v1/completions \
 ```
 
 #### Example response:
-```
+```json
 {
     "model": "qwen3-4b-thinking",
     "choices": [{"text": "It equals 9.", "finish_reason": "stop"}],
