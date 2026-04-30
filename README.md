@@ -5,6 +5,14 @@
 # GGUF REST API Server
 The FastAPI-based REST API server presented in this example uses the Qwen3 thinking model in GGUF format using llama-cpp-python as the inference backend.
 
+## Model training
+If you want to train a model, feel free to use my notebook.
+
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/gist/pramana0361/d89f16f262e2575e313dfd47f5ea8ee2/py2guf_llm_trainer.ipynb)
+
+Or use **Unsloth** via [![Deploy on Runpod](https://img.shields.io/badge/Runpod.io-673DE6?style=for-the-badge&logo=runpod&logoColor=white)](https://console.runpod.io/deploy?template=pzr9tt3vvq&ref=4rviwxaa)
+
+
 ## Installation
 #### Create and activate 'venv' (not mendatory)
 ```bash
@@ -145,10 +153,6 @@ curl -X POST http://localhost:8000/v1/completions \
 }
 ```
 
-## Model training
-If you want to train a model, feel free to use my notebook.
-
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/gist/pramana0361/d89f16f262e2575e313dfd47f5ea8ee2/py2guf_llm_trainer.ipynb)
 
 ## Closing
 This project is an experimental setup exploring a FastAPI-based REST API powered by a Qwen3 thinking model in GGUF format, using llama-cpp-python as the inference backend. It’s a work in progress, intended for testing ideas and learning, so expect changes and rough edges. Contributions, feedback, and experimentation are always welcome.
